@@ -23,14 +23,13 @@ function App() {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [showCheckoutSuccess, setShowCheckoutSuccess] = useState(false)
 
-  // Cart Functions
-  const addToCart = (item) => {
+  const addToCart = (item, quantity = 1) => {
     setCart((prevCart) => {
       const existing = prevCart.find((i) => i.id === item.id)
       if (existing) {
-        return prevCart.map((i) => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i)
+        return prevCart.map((i) => i.id === item.id ? { ...i, quantity: i.quantity + quantity } : i)
       }
-      return [...prevCart, { ...item, quantity: 1 }]
+      return [...prevCart, { ...item, quantity }]
     })
     setIsCartOpen(true) // Automatically slide open cart on adding
   }
