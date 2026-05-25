@@ -13,13 +13,11 @@ function Header({ cartItemsCount, onCartClick }) {
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
           <a href="#hero" className="hover:text-amber-400 transition-colors">Home</a>
-          <a href="#about" className="hover:text-amber-400 transition-colors">Philosophy</a>
           <a href="#menu" className="hover:text-amber-400 transition-colors">The Menu</a>
           <a href="#reserve" className="hover:text-amber-400 transition-colors">Reservations</a>
         </nav>
 
         <div className="flex items-center gap-4">
-          {/* Cart Button */}
           <button 
             onClick={onCartClick}
             className="relative p-2.5 rounded-full bg-zinc-900 border border-zinc-800 text-zinc-400 hover:text-amber-400 hover:border-amber-500/30 transition-all duration-200 flex items-center justify-center"
