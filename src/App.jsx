@@ -6,6 +6,7 @@ import Philosophy from './components/Philosophy'
 import Menu from './components/Menu'
 import Reservations from './components/Reservations'
 import CartDrawer from './components/CartDrawer'
+import RestaurantSummary from './components/RestaurantSummary'
 import Footer from './components/Footer'
 
 function App() {
@@ -82,6 +83,9 @@ function App() {
 
       {/* Modular Philosophy Section */}
       <Philosophy />
+
+      {/* Modular Restaurant Summary Section */}
+      <RestaurantSummary />
 
       {/* Modular Menu Section */}
       <Menu 
